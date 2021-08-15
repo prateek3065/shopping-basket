@@ -10,9 +10,6 @@ export default function CompanyNameBar({ insideCart }) {
       }}
     >
       <h1>EKart</h1>
-      <div className="cart-link">
-        <h1>Go TO Cart ({insideCart.length})</h1>
-      </div>
     </div>
   );
 }

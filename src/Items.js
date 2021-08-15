@@ -14,6 +14,7 @@ export default function Items({ setInsideCart, items, setItems, insideCart }) {
     console.log(element);
   });
   */
+  //console.log(insideCart);
   function handleItemClick(id) {
     var newInsideCart = [];
     var frequency = 0;
@@ -21,8 +22,10 @@ export default function Items({ setInsideCart, items, setItems, insideCart }) {
       if (insideCart[i].id !== id) newInsideCart.push(insideCart[i]);
       else frequency = insideCart[i].frequency;
     }
+
     newInsideCart.push({ id: id, frequency: frequency + 1 });
     setInsideCart(newInsideCart);
+    //console.log(insideCart);
   }
   return (
     <div

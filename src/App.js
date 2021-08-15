@@ -34,7 +34,11 @@ function App() {
           }}
         >
           <h1>Your Basket</h1>
-          <ShowItemsInBasket insideCart={insideCart} items={items} />
+          <ShowItemsInBasket
+            insideCart={insideCart}
+            items={items}
+            setInsideCart={setInsideCart}
+          />
         </div>
       </div>
     </>
