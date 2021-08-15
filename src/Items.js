@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./App.css";
 const { v4: uuidv4 } = require("uuid");
 export default function Items({ setInsideCart, items, setItems, insideCart }) {
@@ -9,12 +9,7 @@ export default function Items({ setInsideCart, items, setItems, insideCart }) {
         setItems(res);
       });
   }, []);
-  /*
-  items.map((element) => {
-    console.log(element);
-  });
-  */
-  //console.log(insideCart);
+
   function handleItemClick(id) {
     var newInsideCart = [];
     var frequency = 0;
@@ -25,7 +20,6 @@ export default function Items({ setInsideCart, items, setItems, insideCart }) {
 
     newInsideCart.push({ id: id, frequency: frequency + 1 });
     setInsideCart(newInsideCart);
-    //console.log(insideCart);
   }
   return (
     <div
