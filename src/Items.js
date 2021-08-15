@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 const { v4: uuidv4 } = require("uuid");
-export default function Items() {
-  const [items, setItems] = useState(() => []);
-  const [pageNo, setPageNo] = useState();
+export default function Items({ setInsideCart, items, setItems, insideCart }) {
   useEffect(() => {
     fetch("https://fakestoreapi.com/products")
       .then((res) => res.json())
@@ -17,11 +15,19 @@ export default function Items() {
   });
   */
   function handleItemClick(id) {
-    console.log(id);
+    var newInsideCart = [];
+    var frequency = 0;
+    for (let i = 0; i < insideCart.length; i++) {
+      if (insideCart[i].id !== id) newInsideCart.push(insideCart[i]);
+      else frequency = insideCart[i].frequency;
+    }
+    newInsideCart.push({ id: id, frequency: frequency + 1 });
+    setInsideCart(newInsideCart);
   }
   return (
     <div
       style={{
+        width: "70%",
         display: "flex",
         flexWrap: "wrap",
         justifyContent: "center",

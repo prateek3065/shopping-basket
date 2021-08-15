@@ -1,6 +1,6 @@
 import React from "react";
-
-export default function CompanyNameBar() {
+import App from "./App";
+export default function CompanyNameBar({ insideCart }) {
   return (
     <div
       style={{
@@ -10,7 +10,9 @@ export default function CompanyNameBar() {
       }}
     >
       <h1>EKart</h1>
-      <h1>Cart</h1>
+      <div className="cart-link">
+        <h1>Go TO Cart ({insideCart.length})</h1>
+      </div>
     </div>
   );
 }
