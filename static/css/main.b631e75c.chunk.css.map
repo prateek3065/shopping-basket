@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/App.css"],"names":[],"mappings":"AAAA,YACE,qBAAuB,CACvB,cACF,CACA,iBACE,wBAAgC,CAChC,UAAW,CACX,cACF","file":"main.b631e75c.chunk.css","sourcesContent":[".item:hover {\n  border: 2px solid black;\n  cursor: pointer;\n}\n.cart-link:hover {\n  background-color: blanchedalmond;\n  color: blue;\n  cursor: pointer;\n}\n"]}
