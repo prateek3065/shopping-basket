@@ -1,3 +1,7 @@
+Deployed Site Link for this project :
+
+https://prateek3065.github.io/shopping-basket/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
